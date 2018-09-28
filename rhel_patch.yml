@@ -1,0 +1,29 @@
+---
+- name: RHEL PATCH Automation
+  hosts: dev 
+  serial: 2 
+  roles:
+    - { role: pre-patch, tags: "pre-patch" }
+    - { role: infra_nfs, tags: "infra_nfs" }
+    - { role: backupConfig, tags: "backupConfig" }    
+    - { role: satregister, tags: "satregister" }
+    - { role: patchme, tags: "patchme" }
+    - { role: cleanup, tags: "cleanup" }
+    - { role: post-patch, tags: "post-patch" }
+    - { role: patchMail, tags: "patchMail" }
+
+################################################################
+##Examples
+################################################################
+##1. Run specific role only by TAG name. 
+##Example: ansible-playbook rhel_patch.yml --tags=backupConfig
+##         ansible-playbook  hel_patch.yml --skip-tags=patchme
+##2. Run from Ansible tower with new hostname. 
+##Example:
+
+###4 - You can list all tasks of a playbook
+#ansible-playbook apache_install.yml --list-tasks
+
+################################################################
+##ansible-playbook <play name> --list-tasks
+################################################################

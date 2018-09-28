@@ -1,0 +1,32 @@
+[tjx_all]
+lnx1isbox06d
+lnx1isbox07d
+#lnx1isbox09d
+#lnx1isbox12d
+#lnx1isbox11d
+
+[dev]
+lnx1isbox06d
+lnx1isbox09d
+lnx1isbox07d
+
+[dev:vars]
+KatelloCA_Install="http://lnx1irhnsat01p/pub/katello-ca-consumer-latest.noarch.rpm"
+baseURL="https://lnx1irhnsat01p.tjx.com/pulp/repos"
+SatServer="lnx1irhnsat01p.tjx.com"
+OrgID="TJX"
+TJX_RHEL5_Key="TJX-RHEL5-Vitual-Host-X86_64-Activation-Key"
+Repo_RHEL5_RPMs="subscription-manager repos --enable=rhel-5-server-rpms"
+Repo_RHEL5_Tools="subscription-manager repos --enable=rhel-5-server-satellite-tools-6.2-rpms"
+#
+TJX_RHEL6_Key="TJX-RHEL6-Vitual-Host-X86_64-Activation-Key"
+Repo_RHEL6_RPMs="subscription-manager repos --enable=rhel-6-server-rpms"
+Repo_RHEL6_Tools="subscription-manager repos --enable=rhel-6-server-satellite-tools-6.2-rpms"
+
+TJX_RHEL7_Key="TJX-RHEL7-Vitual-Host-X86_64-Activation-Key"
+Repo_RHEL7_RPMs="subscription-manager repos --enable=rhel-7-server-rpms"
+Repo_RHEL7_Tools="subscription-manager repos --enable=rhel-7-server-satellite-tools-6.2-rpms"
+
+
+[test]
+#lnx1isbox05d

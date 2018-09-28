@@ -1,0 +1,8 @@
+---
+- name: RHEL Patching Automation
+  hosts: dev
+  serial: 2 
+  roles:
+#    - pre-patch
+    - satregister
+#    - patchme 
